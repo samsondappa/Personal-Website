@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.dark{ background-color: #33648B; color: #ffffff;}
+.darker{ background-color: #212939;  color: #ffffff;}
+.darkest{ background-color: #212129;  color: #ffffff;}
+.light{ color: #8CDEF7;}
+.fullwidth{width: 100%; display:block;}
+.float-right{float: right;}
+.float-left{float: left;}
+
+.container{
+    width: 100%;
+    padding: 0 8.33%;
+    display: table;
+}
+
+.body{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.header{
+    height: 60px;
+    padding-top: 5px;
+    
+}
+
+footer{
+    height: 60px;
+    text-align: center;
+    
+}
+
+.socials-container{
+    max-width: 200px;
+    text-align: center;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.socials{
+    margin: 0 10px;
+}
+
+
+
+nav{
+    height: 100%; 
+}
+
+nav>div{
+    height: 100%;
+    float: left;
+    margin-right: 60px;
+}
+
+nav>#toggle-container>ul{
+    list-style: none;
+    display: inline-block;
+    height: 100%;
+}
+
+nav>#toggle-container>ul>li{
+    display: inline-block;
+    height: 100%;    
+}
+
+nav>#toggle-container>ul>li>a{
+    text-decoration: none;
+    padding: 17px 20px;
+    color: #ffffff;
+    font-size: .83em; 
+    float: left;
+}
+
+nav>#toggle-container>ul>li>a:hover{
+        color: #8CDEF7;
+        transition: .5s;
+}
+.active{
+        color: #8CDEF7 !important;
+}
+ 
+.banner{
+    height: 91vh;
+}
+
+ #toggle-container{
+     display: block;
+}
+
+#toggler{
+    margin: 15px 0;
+}
+
+.mobile, #toggler{
+    display: none;
+}
+
+.desktop{
+    display: block;
+}
+
+/*============== BANNER ANIMATION ======================*/
+.banner-item-container{
+    max-width: 350px;
+    border-left: 2px solid #8CDEF7;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.banner-item>h4{
+    display: inline;
+}
+
+.banner-item>h3{
+    margin-bottom: 5px;
+    font-weight: 100 !important;
+}
+
+.banner-item>p{
+    margin-bottom: 25px;
+    font-weight: 100 !important;
+}
+
+.banner {
+  margin:0px;
+  text-align:left;
+  padding-top:15vh;
+  color:#fff;
+  font-family:'Roboto';
+  font-size:20px;
+  font-weight: bold;
+  overflow:hidden;
+  animation:bg 10s linear infinite;
+}
+
+.dropping-texts {
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+  height: 36px;
+  vertical-align: -18px;
+    
+}
+
+.dropping-texts > div {
+  font-size:0px;
+  opacity:0;
+  margin-left:-30px;
+  position:absolute;
+  font-weight:300;   
+  box-shadow: 0px 60px 25px -20px rgba(0,0,0,0.5);
+}
+
+.dropping-texts > div:nth-child(1) {
+  animation: roll 10s linear infinite 0s;
+}
+.dropping-texts > div:nth-child(2) {
+  animation: roll 10s linear infinite 2s;
+}
+.dropping-texts > div:nth-child(3) {
+  animation: roll 10s linear infinite 4s;
+}
+.dropping-texts > div:nth-child(4) {
+  animation: roll2 10s linear infinite 6s;
+}
+
+@keyframes roll {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  20% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  27% {
+    font-size:0px;
+    opacity:0.5;
+    margin-left:20px;
+    margin-top:100px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(15deg);
+  }
+}
+
+@keyframes roll2 {
+  0% {
+    font-size:0px;
+    opacity:0;
+    margin-left:-30px;
+    margin-top:0px;
+    transform: rotate(-25deg);
+  }
+  3% {
+    opacity:1;
+    transform: rotate(0deg);
+  }
+  5% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  30% {
+    font-size:inherit;
+    opacity:1;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+  37% {
+    font-size:inherit;
+    opacity:0;
+    margin-left:0px;
+    margin-top:0px;
+  }
+  100% {
+    font-size:0px;
+    opacity:0;
+    margin-left:0px;
+    margin-top:0px;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bg {
+  0% {background: #212939;;}
+  3% {background: #212939;;}
+  20% {background: #212939;;}
+  23% {background: #212939;;}
+  40% {background: #212939;;}
+  43% {background: #212939;;}
+  60% {background: #212939;;}
+  63% {background: #212939;;}
+  80% {background: #212939;;}
+  83% {background: #212939;;}
+  100% {background: #212939;;}
+}
+
+/*==================== BANNER ANIMATION ENDS =======================*/
+button{
+    border: none;
+    margin: 5px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.button{
+    background-color: #999999;
+    border: none;
+    color: #ffffff !important;
+    padding: 10px 15px;
+    margin: 30px 15px 30px 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover{
+    background-color: #33648B;
+    cursor: pointer;
+    transition: .5s;
+/*    color: #000000;*/
+}
+
+
+/*=================== PORTFOLIO STARTS HERE ====================*/
+.title{
+    min-height: 120px;
+    padding: 30px;
+    text-align: center;
+    color: #8CDEF7;
+    background: #212530;
+    
+}
+
+.title>h2{
+    font-weight: 100;
+    font-family:'Roboto';
+    font-size: 50px;
+}
+
+.card-container {
+    width: 23%;
+    margin: 1%;
+    display: table;
+    float: left;
+    overflow: hidden;
+    position: relative; 
+    border: 7px solid rgba(33,33,41, .5);
+}
+
+.card-container:hover{
+    cursor: pointer;
+}
+
+.card-image-container{
+    overflow: hidden;
+    padding: 0;
+    z-index: 1;
+    
+}
+
+.portfolio-image{
+    width: 100%;
+    height: 100%;
+    margin-bottom: -5px;
+/*    z-index: 2;*/
+    
+}
+
+
+.full-detail{
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 171, 214, .9);
+    position: absolute;
+    z-index: 3;
+    padding: 40% 15px;
+    top: 100%;
+    text-align: center;    
+}
+
+.clone{
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 171, 214, 0);
+    position: absolute;
+    top: 0;
+    z-index: 4;
+}
+
+.clone:hover{
+    cursor: zoom-in;
+}
+
+.hide{
+    display:none;
+}
+
+.show{
+    display:block;
+}
+
+.full-detail>h3{
+    margin: -20px 0 10px 0;
+    font-weight: 100;
+    font-size: 100%;
+}
+
+.view{
+    margin: 5px 0;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.view:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+}
+/*260x114*/
+/*=================== PORTFOLIO ==END== HERE ====================*/
+
+@media only screen and (max-width: 1000px){
+    .card-container {
+        width: 32%;
+        margin: .5%;
+    }
+    
+}
+
+@media only screen and (max-width: 670px) {
+    #toggle-container{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #8CDEF7;
+        text-align: center;
+        padding: 20px 0;  
+        z-index: 100;
+    }
+    
+    .mobile{
+        display: inline-block !important;
+    }
+    
+    .desktop{
+        display: none !important;
+    }
+    
+    #toggler{
+        display: inline-block;
+    }
+    
+    
+    
+    nav>#toggle-container>ul{
+        display:block;
+        width: auto;
+        height: auto;
+        margin-top: 100px;  
+    }
+    
+    nav>#toggle-container>ul>li{
+        display:block;
+        height: auto;
+        margin: 60px 0;
+    }
+
+    nav>#toggle-container>ul>li>a{
+        text-decoration: none;
+        padding: 17px 20px;
+        color: #ffffff;
+        font-size: .83em;
+        float: none; 
+    } 
+    
+    nav>#toggle-container>ul>li>a:hover, .active{
+        background-color: #212129;
+        color: #8CDEF7;
+        transition: .5s;
+    }
+    
+    
+     .card-container {
+        width: 48%;
+        margin: 1%;
+    }
+    
+    
+    
+    @media only screen and (orientation: landscape) {
+         nav>#toggle-container>ul>li{
+            display:inline-block;
+            margin: -20px 0;
+        }
+    }
+
+}
+

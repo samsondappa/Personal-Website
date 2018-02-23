@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="18px" height="18px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+            viewBox="0 0 1129 917" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs>
+              <style type="text/css">
+                .twitter-svg {
+                  fill: rgb(190, 190, 190);
+                  fill-rule: nonzero;
+                }
+              </style>
+            </defs>
+            <path class="twitter-svg" d="M1129 109c-42,18 -86,30 -133,36 48,-29 84,-74 102,-128 -45,26 -95,46 -147,56 -43,-45 -103,-73 -169,-73 -128,0 -232,104 -232,232 0,18 2,35 6,52 -193,-9 -363,-101 -477,-242 -20,35 -32,74 -32,117 0,80 41,151 103,193 -38,-2 -73,-12 -105,-29 0,1 0,2 0,3 0,112 80,205 186,227 -19,5 -40,8 -61,8 -15,0 -29,-2 -43,-4 29,92 115,159 216,160 -79,63 -179,100 -288,100 -18,0 -37,-1 -55,-4 102,66 224,104 355,104 426,0 659,-352 659,-659 0,-10 0,-20 -1,-29 46,-33 85,-74 116,-120z"
+            />
+          </svg>
