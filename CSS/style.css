@@ -121,11 +121,19 @@ nav>#toggle-container>ul>li>a:hover{
 /*============== BANNER ANIMATION ======================*/
 .banner-item-container{
     max-width: 350px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    
+    background: rgba(33,41,57, 0.6);
+}
+
+.banner-item{
     border-left: 2px solid #8CDEF7;
     padding-left: 15px;
     padding-top: 10px;
+    
 }
-
 .banner-item>h4{
     display: inline;
 }
@@ -149,7 +157,10 @@ nav>#toggle-container>ul>li>a:hover{
   font-size:20px;
   font-weight: bold;
   overflow:hidden;
-  animation:bg 10s linear infinite;
+/*  animation:bg 10s linear infinite;*/
+  background: url(../Images/samsonnewauto.png) no-repeat bottom right;
+    
+    background-color: #212939;
 }
 
 .dropping-texts {
@@ -263,6 +274,7 @@ nav>#toggle-container>ul>li>a:hover{
   }
 }
 
+/*
 @keyframes bg {
   0% {background: #212939;;}
   3% {background: #212939;;}
@@ -276,6 +288,7 @@ nav>#toggle-container>ul>li>a:hover{
   83% {background: #212939;;}
   100% {background: #212939;;}
 }
+*/
 
 /*==================== BANNER ANIMATION ENDS =======================*/
 button{
@@ -286,18 +299,20 @@ button{
 }
 
 .button{
-    background-color: #999999;
+    background-color: #FFCC29;
     border: none;
-    color: #ffffff !important;
+    color: #000000 !important;
     padding: 10px 15px;
     margin: 30px 15px 30px 0;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 7px;
 }
 
 .button:hover{
+    color: #ffffff !important;
     background-color: #33648B;
     cursor: pointer;
     transition: .5s;
@@ -418,7 +433,7 @@ button{
         position: absolute;
         top: 0;
         left: 0;
-        background-color: #8CDEF7;
+        background-color: rgba(140,222,247, .9);
         text-align: center;
         padding: 20px 0;  
         z-index: 100;
@@ -471,7 +486,15 @@ button{
         margin: 1%;
     }
     
+   
     
+    @media only screen and (max-width: 472px) {
+        .banner {
+            background: url(../Images/samsonnewauto.png) no-repeat bottom center;
+            background-color: #212939;
+        }
+        
+    }
     
     @media only screen and (orientation: landscape) {
          nav>#toggle-container>ul>li{
