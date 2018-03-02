@@ -1,8 +1,14 @@
 var toggler = document.getElementById('toggler');
 var cancel = document.getElementById('cancel');
 var toggleContainer = document.getElementById('toggle-container');
+var closeImage = document.querySelector('#closeimage');
+var body = document.querySelector('body');
 var fullDetail = document.querySelectorAll('.full-detail');
 var cardContainer = document.querySelectorAll('.clone');
+var selected = document.querySelector('.selected');
+var currentView;
+var currentClone;
+var disableMoreinfo;
 
 
 //============== TOGGLE EVENT HANDLER ===============
@@ -51,11 +57,12 @@ function detailSlideBack(element){
 }
     for (var x=0; x<cardContainer.length; x++){
         cardContainer[x].addEventListener('mouseover', function(){
-            this.nextElementSibling.classList.remove("hide");
-            this.nextElementSibling.classList.add("show");
-            var m =this.nextElementSibling;
-            detailSlide(m);
             
+                this.nextElementSibling.classList.remove("hide");
+                this.nextElementSibling.classList.add("show");
+                var m =this.nextElementSibling;
+                disableMoreinfo = this.nextElementSibling;
+                detailSlide(m);
             
         });
         
@@ -63,9 +70,32 @@ function detailSlideBack(element){
             this.nextElementSibling.classList.remove("show");
             this.nextElementSibling.classList.add("hide");
             var n =this.nextElementSibling;
-            detailSlideBack(n)
-            
+            detailSlideBack(n);
+        });
+                                         
+        cardContainer[x].addEventListener('click', function(){
+            currentClone = this;
+            this.offsetParent.classList.add("selected");
+            this.offsetParent.classList.remove("card-container");
+            body.classList.add("stop-scrolling");
+            currentClone.style.cursor = "not-allowed";
+            disableMoreinfo.style.display = 'none';
+            closeImage.style.display = 'block';
+            currentView = this.offsetParent;
         });
     }
+
+closeImage.addEventListener('click', function(){
+    currentView.classList.add("card-container");
+    currentView.classList.remove("selected");
+    disableMoreinfo.style.display = 'block';
+    closeImage.style.display = 'none';
+    body.classList.remove("stop-scrolling");
+    currentClone.style.cursor = "pointer";
+});
+
+
+
+
 
 //============ END PORTFOLIO EVENT HANDLER ================
